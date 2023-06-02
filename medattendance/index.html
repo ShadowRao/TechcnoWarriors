@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Document</title>
 </head>
+
 <body>
-    <video width="1200" controls="true" poster="" id="video">
-        <source type="video/mp4" src="http://www.w3schools.com/html/mov_bbb.mp4"></source>
-    </video>
-    
-    <div id="status" class="incomplete">
-    <span>Play status: </span>
-    <span class="status complete">COMPLETE</span>
-    <span class="status incomplete">INCOMPLETE</span>
-    <br />
-    </div>
-    <div>
-    <span id="played">0</span> seconds out of 
-    <span id="duration"></span> seconds. (only updates when the video pauses)
-    </div>
-    
+    <header class="header">
+        <h1 class="header-text">Hello</h1>
+    </header>
+    <main class="main-conatiner">
+        <div class="vidio-conatiner">
+            <video width="1200" controls="true" poster="" id="video">
+                <source type="video/mp4" src="http://www.w3schools.com/html/mov_bbb.mp4">
+                </source>
+            </video>
+        </div>
+        <div class="right-conatiner">
+            <div class="camara-conatiner">
+                Camara Placeholder
+            </div>
+            <div class="chat-conatiner">
+                Chat Placeholder
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="play-status-conatiner">
+            <div id="status" class="incomplete">
+                <span class="play-status-text">Play status: </span>
+                <span class="status complete">COMPLETE</span>
+                <span class="status incomplete">INCOMPLETE</span>
+            </div>
+            <div>
+                <span id="played">0</span> seconds out of
+                <span id="duration"></span> seconds. (only updates when the video pauses)
+            </div>
+        </div>
+        <div class="footer-btn">
+            <button class="quiz-btn">Generate-Quiz</button>
+        </div>
+    </footer>
 </body>
-<script src="script.js"></script>
+<script src="index.js"></script>
+
 </html>
