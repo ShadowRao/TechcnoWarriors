@@ -1,0 +1,5 @@
+B. A machine that can reason and solve problems
+C. Adapting to a variety of input conditions
+A. Machines as smart as humans
+C. Ability to learn from data and experience
+B. A subset of Machine Learning

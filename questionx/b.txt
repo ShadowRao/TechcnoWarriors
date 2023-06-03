@@ -1,0 +1,34 @@
+Q1. What is Artificial Intelligence? 
+a. The ability for computers to do things that require human intelligence 
+b. An algorithm that can predict and recommend actions 
+c. The ability of a computer to defeat a professional Go Player 
+d. An algorithm that can drive a car and walk
+A. The ability for computers to do things that require human intelligence
+
+Q2. What is needed for a computer to perform AI tasks?
+a. A large data set
+b. Patience
+c. A professional Go Player
+d. Sufficient computing power
+A. A large data set
+
+Q3. How does AI differ from human intelligence?
+a. AI cannot tackle a wider set of data and methods 
+b. AI requires lots of data for its algorithms
+c. AI can solve problems faster than humans 
+d. AI is not able to understand spoken language
+A. AI cannot tackle a wider set of data and methods
+
+Q4. What has helped to familiarize the world with Artificial Intelligence? 
+a. Professional Go Players
+b. Cars 
+c. Hollywood 
+d. Data sets
+A. Hollywood
+
+Q5. What did the computer program AlphaGo defeat in 2016? 
+a. A human in a game of monopoly 
+b. a professional Go player 
+c. a car 
+d. a large data set 
+A. a professional Go player
