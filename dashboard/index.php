@@ -1,3 +1,62 @@
+<?php
+$conn = mysqli_connect('localhost', 'root', '', 'attend') or die("Unable to connect to database");
+
+
+$receivedData = $_GET['data'];
+echo $receivedData;
+$sql = "SELECT * FROM student WHERE email = '$receivedData'";
+$result = $conn->query($sql);
+while ($row = $result->fetch_assoc()) {
+  $name=$row["name"];
+}
+
+$count1=0;
+$sql1 = "SELECT * FROM attendance WHERE email = '$receivedData' AND cid = '1'";
+$result1 = $conn->query($sql1);
+while ($row1 = $result1->fetch_assoc()) {
+  $count1=$count1+1;
+}
+
+$count2=0;
+$sql2 = "SELECT * FROM attendance WHERE email = '$receivedData' AND cid = '2'";
+$result2 = $conn->query($sql2);
+while ($row1 = $result2->fetch_assoc()) {
+  $count2=$count2+1;
+}
+
+$count3=0;
+$sql3 = "SELECT * FROM attendance WHERE email = '$receivedData' AND cid = '3'";
+$result3 = $conn->query($sql3);
+while ($row1 = $result3->fetch_assoc()) {
+  $count3=$count3+1;
+}
+
+$count4=0;
+$sql4 = "SELECT * FROM attendance WHERE email = '$receivedData' AND cid = '4'";
+$result4 = $conn->query($sql4);
+while ($row1 = $result4->fetch_assoc()) {
+  $count4=$count4+1;
+}
+
+$count5=0;
+$sql5 = "SELECT * FROM attendance WHERE email = '$receivedData' AND cid = '5'";
+$result5 = $conn->query($sql5);
+while ($row1 = $result5->fetch_assoc()) {
+  $count5=$count5+1;
+}
+
+
+if ($result1) {
+  $row1 = mysqli_fetch_array($result1);
+  $count = $row1[0]; // The count value is in the first column (index 0)
+} else {
+  echo "Query failed";
+}
+// $sql2 = "SELECT * FROM attdenace WHERE email = '$receivedData'";
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,16 +88,12 @@
 
           <li>
             <a href="#">
-              <span class="fa fa-search"></span>
-              <span>Profile pic</span>
+              <span class="fa fas fa-book"></span>
+              <span><?php echo $name; ?></span>
             </a>
           </li>
 
           <li>
-            <a href="#">
-              <span class="fa fas fa-book"></span>
-              <span>Name</span>
-            </a>
           </li>
         </ul>
       </div>
@@ -77,9 +132,8 @@
             <li>
             </li>
             <li>
-              <a href="#">Download Report</a>
             </li>
-            <li class="divider">|</li>
+            <li class="divider"></li>
             <li>
               <a href="https://github.com/ShadowRao/TechcnoWarriors">Attend Missed Class</a>
             </li>
@@ -93,74 +147,35 @@
 
         <div class="list">
           <div class="item">
-            <img
-              src="" alt="class"
-            />
             <h4>Class 1</h4>
+            <p><?php echo $count1;?></p>
             <p>Class code</p>
           </div>
-
+          <div class="list">
           <div class="item">
-            <img
-              src="" alt="class"
-            />
             <h4>Class 2</h4>
-            <p>Class code<p>
+            <p><?php echo $count2;?></p>
+            <p>Class code</p>
           </div>
-
+          <div class="list">
           <div class="item">
-            <img
-              src="" alt="class"
-            />
             <h4>Class 3</h4>
-            <p>Class code<p>
+            <p><?php echo $count3;?></p>
+            <p>Class code</p>
           </div>
-
+          <div class="list">
           <div class="item">
-            <img
-            src="" alt="class"
-            />
             <h4>Class 4</h4>
-            <p>Class code<p>
+            <p><?php echo $count4;?></p>
+            <p>Class code</p>
           </div>
-
+          <div class="list">
           <div class="item">
-            <img
-            src="" alt="class"
-            />
             <h4>Class 5</h4>
-            <p>Class code<p>
-          </div>
-
-          <div class="item">
-            <img
-            src="" alt="class"
-            />
-            <h4>Class 6</h4>
-            <p>Class code<p>
-          </div>
-
-          <div class="item">
-            <img
-            src="" alt="class"
-            />
-            <h4>Class 7</h4>
-            <p>Class code<p>
-          </div>
-
-          <div class="item">
-            <img
-            src="" alt="class"
-            />
-            <h4>Class 8</h4>
-            <p>Class code<p>
+            <p><?php echo $count5;?></p>
+            <p>Class code</p>
           </div>
         </div>
-      </div>
-      <div>
-      <button type="button" class="bottom-right">
-        <img src="bot1.png" alt="logo">
-        </button>
       </div>
      
 
